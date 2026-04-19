@@ -1,0 +1,64 @@
+import CIMAS from '../../asset/CIMAS.png';
+import Bulk from '../../asset/Bulk.png';
+import Stock from '../../asset/Stock.png';
+import Ai from '../../asset/Ai.png';
+const data = [{
+    title : "CIMAS's website",
+    image :CIMAS,
+    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    link: ''
+
+},
+{
+    title : 'Webridge system',
+    image :Bulk,
+    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    link: ''
+
+},
+{
+    title : 'Inventory management system',
+    image :Stock,
+    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    link: ''
+
+},
+
+{
+    title : 'AI project',
+    image :Ai,
+    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    link: ''
+
+},
+]
+
+console.log(data)
+function Project (){
+return(
+    <div className="px-24">
+          <div className='grid grid-cols-2  '>  
+{data.map((item, index) => (
+  <div key={index} className='m-5 '>
+    
+    <div className="rounded-2xl bg-gray-200/75 p-6 overflow-hidden">
+      <img
+        className="w-full h-72 rounded-2xl object-cover"
+        src={item.image}
+        alt={item.title}
+      />
+    </div>
+  <h4 className="text-lg  text-gray-600 my-4">
+    {item.title}  </h4>
+    <p className="text-black/90 font-medium text-2xl ">{item.descriptin}</p>
+<p className="text-blue-500 hover:text-blue-700 text-lg cursor-pointer pt-8"> View Project  </p>
+
+
+  </div>
+))}
+
+    </div>
+    </div>
+)
+}
+export default Project;
