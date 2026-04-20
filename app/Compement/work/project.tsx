@@ -5,21 +5,23 @@ import Ai from '../../asset/Ai.png';
 const data = [{
     title : "CIMAS's website",
     image :CIMAS,
-    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    descriptin: 'Development of an innovative web solution for the Ali Sabieh Cement Plant',
     link: ''
 
 },
+
 {
-    title : 'Webridge system',
+    title : 'Weighbridge system',
     image :Bulk,
-    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    descriptin: 'Intelligent Weighbridge System for Vehicle Weight Management',
     link: ''
 
 },
+
 {
-    title : 'Inventory management system',
+    title : 'Smart Inventory: An Intelligent Stock Management System',
     image :Stock,
-    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    descriptin: 'Smart Inventory : système intelligent de gestion des stocks',
     link: ''
 
 },
@@ -27,13 +29,13 @@ const data = [{
 {
     title : 'AI project',
     image :Ai,
-    descriptin: 'Simplifying taxes for all: Deciphering User Needs and Triggering the Redesign Journey',
+    descriptin: 'AI Solution: Driving Innovation Through Intelligence',
     link: ''
 
 },
 ]
 
-console.log(data)
+
 function Project (){
 return(
     <div className="px-24">

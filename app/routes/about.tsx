@@ -6,7 +6,7 @@ import Footer from "../Generale/Footer";
 import Menue from "~/Generale/Menue";
 import Aboutme from "~/Compement/About/about";
 import WhoAmI from "~/Compement/About/who_am_i";
-import Skill from "~/Compement/About/skill";
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -15,5 +15,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function About() {
-  return <div className=" flex flex-col gap-40 "> <Menue />   <Aboutme /><WhoAmI /><Skill /><Footer /></div>;
+  return <div className=" flex flex-col gap-40 "> <Menue />   <Aboutme /><WhoAmI /><Footer /></div>;
 }
