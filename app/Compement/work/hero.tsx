@@ -1,4 +1,5 @@
 import Faceless from "../../asset/faceless.png";
+
 function Hero(){
 return(
 <div className="px-24">
