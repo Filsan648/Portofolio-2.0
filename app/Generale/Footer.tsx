@@ -1,9 +1,9 @@
 function Footer (){
     return(
-        <div className="px-24">
-              <div className="flex justify-between">
+        <div className="lg:px-24 px-1.5">
+              <div className="flex flex-col lg:flex-row justify-between">
             <p className="">Thanks for reaching the bottom of this page. <br/> If you like what you seelet's connect and build , <br/>something together!</p>
-       <p>   Alternatively, here's a fancy sheet of paper.  <br/><a href="/cv.pdf" download  className="text-lg text-blue-500"> Resume  </a><span className="text-xl text-blue-500"> ↗</span></p>
+       <p className="py-5 lg:0">   Alternatively, here's a fancy sheet of paper.  <br/><a href="/cv.pdf" download  className="text-lg py-5 lg:py-0 text-blue-500"> Resume  </a><span className="text-xl text-blue-500"> ↗</span></p>
           </div>
 
              <div className="flex justify-between py-6">  

@@ -1,5 +1,6 @@
 import {Projects }from '../../data/DataProject';
 import React from 'react';
+
 const details = [
   { label: "Role", value: Projects[0].Role },
   { label: "Technologies", value: Projects[0].Tecnologies },
@@ -46,14 +47,24 @@ function Demo() {
     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 blur-3xl opacity-20"></div>
 
     <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
-      <img
-        src={Projects[0].DemoImage}
-        alt="Demo"
-        className="w-full h-auto"
-      />
+    {
+         Projects[0].DemoVideo ? (
+            <video controls className="w-full h-auto">
+              <source src={Projects[0].DemoVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <img
+              src={Projects[0].DemoImage}
+              alt="Demo"
+              className="w-full h-auto"
+            />
+          )
+    }
+      
     </div>
-
   </div>
+   
 </div>
   );
 }

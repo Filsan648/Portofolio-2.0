@@ -1,5 +1,5 @@
 function WhoAmI() {
-return(<div className="px-36">
+return(<div className="lg:px-24 md:px-20 px-2 ">
    <h2 className="text-black/60 text-sm font-light pb-12"> Who am I?</h2>
 <p className="text-justify text-lg ">
 Growing up in Djibouti, I developed a strong interest in technology and problem-solving. I’ve always been curious about how systems work behind the scenes and how digital solutions can improve efficiency in real-world environments. This curiosity naturally led me to pursue a path in software and web development.

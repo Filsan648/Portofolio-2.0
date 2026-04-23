@@ -38,8 +38,8 @@ const data = [{
 
 function Project (){
 return(
-    <div className="px-24">
-          <div className='grid grid-cols-2  '>  
+    <div className="lg:px-24 ">
+          <div className='grid md:grid-cols-2  grid-cols-1 '>  
 {data.map((item, index) => (
   <div key={index} className='m-5 '>
     
