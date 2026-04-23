@@ -21,12 +21,11 @@ function Menue() {
         About
       </NavLink>
 
-      <NavLink 
-        to="/resume" 
-        className={({ isActive }) => isActive ? activeStyle : normalStyle}
-      >
+      <a href="/cv.pdf" download className={normalStyle}>
+      
+      
         Resume
-      </NavLink>
+      </a>
     </nav>
   );
 }
