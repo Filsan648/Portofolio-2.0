@@ -14,7 +14,7 @@ const data = [{
     id: 1,
     title : 'Weighbridge system',
     image :Bulk,
-    descriptin: 'Intelligent Weighbridge System for Vehicle Weight Management',
+    descriptin: 'An intelligent delivery management system',
     link: '/Project/1'
 
 },

@@ -1,17 +1,34 @@
 import { NavLink } from 'react-router';
 import {Projects }from '../../data/DataProject';
 import React from 'react';
-
-
-
+import Button from '~/utils/Button';
+import Githublogos from '../../asset/githublogos.png';
+import websitelogos from '../../asset/websiteicone.png';
 
 function ProjectDescription({id}: {id: number }) {
 return(
     <div className=''>
 
-    <div className='px-24'> 
+    <div className='lg:px-24 px-6'> 
        <h1 className='text-5xl font-bold py-5 text-black/90'>{Projects[id].title}</h1>
-         <p className='w-1/2 text-black/80'>{Projects[id].SUMMARY}</p>
+         <p className='lg:w-1/2 w-full text-black/80'>{Projects[id].SUMMARY}</p>
+         <div className="flex lg:flex-row flex-col gap-4 my-6">
+        {Projects[id].githubrepos && (
+  <Button
+    text="View on GitHub"
+    image={Githublogos}
+    link={Projects[id].githubrepos}
+  />
+)}
+
+{Projects[id].livedemo && (
+  <Button
+    text="Live Demo"
+    image={websitelogos}
+    link={Projects[id].livedemo}
+  />
+)}
+</div>
          </div>
           < DetailItem id={id} />
             <Demo id={id} />
@@ -23,49 +40,35 @@ return(
 export default ProjectDescription;
 
 
-function DetailItem({id}: {id: number}) {
+function DetailItem({ id }: { id: number }) {
   const details = [
-  { label: "Role", value: Projects[id].Role },
-  { label: "Technologies", value: Projects[id].Tecnologies },
-  { label: "Timeline", value: Projects[id].Timeline },
-];
+    { label: "Role", value: Projects[id].Role },
+    { label: "Technologies", value: Projects[id].Tecnologies },
+    { label: "Timeline", value: Projects[id].Timeline },
+  ];
+
   return (
-    <div className="bg-gray-200 grid grid-cols-[auto_1fr] gap-y-20 gap-x-10  px-24 my-16 py-24">
-  {details.map((item, index) => (
-    <React.Fragment key={index}>
-      <p className="font-bold text-2xl text-black/85">{item.label}</p>
-      <p className="font-light text-2xl text-black/85">{item.value}</p>
-    </React.Fragment>
-  ))}
-</div>
+    <div className="bg-gray-200 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-y-6 md:gap-y-20 gap-x-6 md:gap-x-10 px-6 md:px-24 my-8 md:my-16 py-10 md:py-24">
+      {details.map((item, index) => (
+        <React.Fragment key={index}>
+          <p className="font-bold text-lg md:text-2xl text-black/85">
+            {item.label}
+          </p>
+          <p className="font-light text-lg md:text-2xl text-black/85">
+            {item.value}
+          </p>
+        </React.Fragment>
+      ))}
+    </div>
   );
 }
 
-
 function Demo({id}: {id: number }) {
   return (
-  <div className="px-6 md:px-24 py-10 flex justify-center">
+  <div className="px-6 py-10 flex justify-center">
   <div className="relative w-full max-w-5xl">
     
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 blur-3xl opacity-20"></div>
-
-    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
-    {
-         Projects[id].DemoVideo ? (
-            <video controls className="w-full h-auto">
-              <source src={Projects[id].DemoVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img
-              src={Projects[id].DemoImage}
-              alt="Demo"
-              className="w-full h-auto"
-            />
-          )
-    }
-      
-    </div>
+        {Projects[id].Body}
   </div>
    
 </div>

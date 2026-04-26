@@ -16,6 +16,7 @@ function Button({
         bg-transparent text-black font-medium
         rounded-full border border-black/20
         hover:shadow-md
+        lg:text-lg  text-sm
         active:scale-95
       "
     >
