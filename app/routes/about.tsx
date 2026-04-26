@@ -9,9 +9,12 @@ import WhoAmI from "~/Compement/About/who_am_i";
 import ProjectDescription from "~/Compement/work/project_description";
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+  { title: "About Filsan Fouad | Software Engineer" },
+  { 
+    name: "description", 
+    content: "Get to know Filsan Fouad, a software engineer skilled in full-stack development, with expertise in creating scalable applications and delivering high-quality digital experiences." 
+  },
+];
 }
 
 export default function About() {
