@@ -3,34 +3,35 @@ import Bulk from '../../asset/Bulk.png';
 import Stock from '../../asset/Stock.png';
 import Ai from '../../asset/Ai.png';
 const data = [{
+  id: 0,
     title : "CIMAS's website",
     image :CIMAS,
     descriptin: 'Development of an innovative web solution for the Ali Sabieh Cement Plant',
-    link: ''
+    link: '/Project/0'
 
 },
-
 {
+    id: 1,
     title : 'Weighbridge system',
     image :Bulk,
     descriptin: 'Intelligent Weighbridge System for Vehicle Weight Management',
-    link: ''
+    link: '/Project/1'
 
 },
-
 {
+    id: 2,
     title : 'Smart Inventory: An Intelligent Stock Management System',
     image :Stock,
     descriptin: 'Smart Inventory : système intelligent de gestion des stocks',
-    link: ''
+    link: '/Project/2'
 
 },
-
 {
+    id: 3,
     title : 'AI project',
     image :Ai,
     descriptin: 'AI Solution: Driving Innovation Through Intelligence',
-    link: ''
+    link: '/Project/3'
 
 },
 ]
@@ -53,7 +54,7 @@ return(
   <h4 className="text-lg  text-gray-600 my-4">
     {item.title}  </h4>
     <p className="text-black/90 font-medium text-2xl ">{item.descriptin}</p>
-<p className="text-blue-500 hover:text-blue-700 text-lg cursor-pointer pt-8"> View Project  </p>
+<a href={item.link} className="text-blue-500 hover:text-blue-700 text-lg cursor-pointer pt-8"> View Project  </a>
 
 
   </div>
