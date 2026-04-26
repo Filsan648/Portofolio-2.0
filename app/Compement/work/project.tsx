@@ -1,7 +1,8 @@
 import CIMAS from '../../asset/CIMAS.png';
 import Bulk from '../../asset/Bulk.png';
 import Stock from '../../asset/Stock.png';
-import Ai from '../../asset/Ai.png';
+import Aiproject from '../../asset/Ai.png';
+ 
 const data = [{
   id: 0,
     title : "CIMAS's website",
@@ -29,7 +30,7 @@ const data = [{
 {
     id: 3,
     title : 'AI project',
-    image :Ai,
+    image :Aiproject,
     descriptin: 'AI Solution: Driving Innovation Through Intelligence',
     link: '/Project/3'
 
