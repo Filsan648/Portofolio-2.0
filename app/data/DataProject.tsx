@@ -4,7 +4,7 @@ import stockdemos from '../asset/stockdemos.png'
 import cimas from '../asset/CIMAS.png'
 import bulk from '../asset/Bulk.png'
 import stock from '../asset/Stock.png'
-import ai from '../asset/Ai.png'
+import ai from '../asset/AI.png'
 import { StockProjectData } from './StockProjectData'
 import demosai from "../asset/aidemos.png"
 export  const  Projects =[
