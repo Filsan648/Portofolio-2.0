@@ -8,11 +8,14 @@ import Menue from "~/Generale/Menue";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Home | Filsan's Portfolio" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+  { title: "Filsan Fouad | Full-Stack Developer Portfolio" },
+  { 
+    name: "description", 
+    content: "Discover the portfolio of Filsan Fouad, a passionate full-stack developer specializing in modern web applications, UI/UX design, and innovative digital solutions." 
+  },
+];
 }
 
 export default function Home() {
-  return <div className=" flex flex-col gap-40 "> <Menue />  <Hero /><Direction /><Project /><Footer /></div>;
+  return <div className=" flex flex-col gap-40 bg-white "> <Menue />  <Hero /><Direction /><Project /><Footer /></div>;
 }

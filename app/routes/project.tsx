@@ -4,6 +4,7 @@ import Menue from "~/Generale/Menue";
 import { useParams } from "react-router";
 import ProjectDescription from "~/Compement/work/project_description";
 import { Projects } from "~/data/DataProject";
+
 export function meta({}: Route.MetaArgs) {
     const { id } = useParams();
        const newsId = Number(id!)
@@ -16,5 +17,5 @@ export function meta({}: Route.MetaArgs) {
 export default function Projectes() {
        const { id } = useParams();
        const newsId = Number(id!)
-  return <div className=" flex flex-col gap-40 "> <Menue />  <ProjectDescription id={newsId} /> <Footer />   </div>;
+  return <div className=" flex flex-col bg-white gap-40 "> <Menue />  <ProjectDescription id={newsId} /> <Footer />   </div>;
 }
