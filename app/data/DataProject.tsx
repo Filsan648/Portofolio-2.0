@@ -7,8 +7,10 @@ import stock from '../asset/Stock.png'
 import ai from '../asset/AI.png'
 import { StockProjectData } from './StockProjectData'
 import demosai from "../asset/aidemos.png"
-export  const  Projects =[
-    {
+
+
+export  const  Projects =[ 
+  {
         id: 0,
         title : "CIMAS",
         Image : cimas,
