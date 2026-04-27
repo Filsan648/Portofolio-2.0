@@ -3,6 +3,9 @@ import Bulk from '../../asset/Bulk.png';
 import Stock from '../../asset/Stock.png';
 import Aiproject from '../../asset/AI.png';
  
+
+
+
 const data = [{
   id: 0,
     title : "CIMAS's website",
