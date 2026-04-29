@@ -4,35 +4,61 @@ import React from 'react';
 import Button from '~/utils/Button';
 import Githublogos from '../../asset/githublogos.png';
 import websitelogos from '../../asset/websiteicone.png';
-
+import DemosResponsiveDesign from '~/utils/DemosResponsiveDesign';
+import ProjectGallerie from '~/utils/Gallerie';
 function ProjectDescription({id}: {id: number }) {
 return(
-    <div className=''>
+    <div className=' '>
+        <div>
+            <h2 className='text-blue-600 font-medium tracking-widest text-center text-3xl'>{Projects[id].title}</h2>
+       <h1 className='text-5xl text-center font-bold py-5 tracking-widest text-black/80'>{Projects[id].description}</h1>
+         <div className='w-full h-screen'>   
+          <img src={Projects[id].Image} alt={Projects[id].title} className='w-full h-full object-cover  ' /> 
+          
+          </div>
+             {/* Details Section */}
 
-    <div className='lg:px-24 px-6'> 
-       <h1 className='text-5xl font-bold py-5 text-black/90'>{Projects[id].title}</h1>
-         <p className='lg:w-1/2 w-full text-black/80'>{Projects[id].SUMMARY}</p>
-         <div className="flex lg:flex-row flex-col gap-4 my-6">
-        {Projects[id].githubrepos && (
-  <Button
-    text="View on GitHub"
-    image={Githublogos}
-    link={Projects[id].githubrepos}
-  />
-)}
+            < DetailItem id={id} />
 
-{Projects[id].livedemo && (
-  <Button
-    text="Live Demo"
-    image={websitelogos}
-    link={Projects[id].livedemo}
-  />
-)}
-</div>
-         </div>
-          < DetailItem id={id} />
-            <Demo id={id} />
-            <NextProject id={id} />
+            {/* SUMMARY */}
+             <div className='px-24'>
+
+                <h1 className='text-5xl font-bold py-5 text-black/80'>SUMMARY</h1>
+                <p className='w-full text-black/80'>{Projects[id].SUMMARY}</p>
+
+                {/* Buttons */}
+            <div className="flex lg:flex-row flex-col gap-4 my-6">
+            {Projects[id].githubrepos && (
+
+           <Button
+           text="View on GitHub"
+          image={Githublogos}
+         link={Projects[id].githubrepos}
+        />
+        )}
+
+       {Projects[id].livedemo && (
+       <Button
+       text="Live Demo"
+       image={websitelogos}
+      link={Projects[id].livedemo}
+      />
+    )}
+      </div>
+         
+
+      </div>
+        {/* Demos Section */}
+        <Demo id={id} />
+
+         {/* Next Projects Section */}
+         <NextProject id={id} />
+
+
+
+            </div>
+    
+            
 
     </div>
 )
@@ -48,7 +74,7 @@ function DetailItem({ id }: { id: number }) {
   ];
 
   return (
-    <div className="bg-gray-200 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-y-6 md:gap-y-20 gap-x-6 md:gap-x-10 px-6 md:px-24 my-8 md:my-16 py-10 md:py-24">
+    <div className="bg-gray-200 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-y-6 md:gap-y-20 gap-x-6 md:gap-x-10 px-6 md:px-24   py-10 md:py-24">
       {details.map((item, index) => (
         <React.Fragment key={index}>
           <p className="font-bold text-lg md:text-2xl text-black/85">
@@ -65,10 +91,13 @@ function DetailItem({ id }: { id: number }) {
 
 function Demo({id}: {id: number }) {
   return (
-  <div className="px-6 py-10 flex justify-center">
-  <div className="relative w-full max-w-5xl">
+  <div className="  ">
+  <div className="">
     
-        {Projects[id].Body}
+        <ProjectGallerie />
+         <DemosResponsiveDesign/>
+         
+
   </div>
    
 </div>
