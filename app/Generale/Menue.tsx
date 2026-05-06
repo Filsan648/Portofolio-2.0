@@ -14,7 +14,7 @@ function Menue() {
       
       <div className="flex justify-between items-center">
         
-        {/* Logo (optionnel) */}
+   
         <h1 className="font-bold text-black">Portfolio</h1>
 
         {/* Desktop Menu */}
@@ -31,8 +31,6 @@ function Menue() {
             Resume
           </a>
         </div>
-
-        {/* Mobile Button */}
         <div className="md:hidden" onClick={() => setOpen(!open)}>
           <MenueButton />
         </div>
