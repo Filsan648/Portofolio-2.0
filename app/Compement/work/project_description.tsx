@@ -5,7 +5,6 @@ import Button from '~/utils/Button';
 import Githublogos from '../../asset/githublogos.png';
 import websitelogos from '../../asset/websiteicone.png';
 import DemosResponsiveDesign from '~/utils/DemosResponsiveDesign';
-import ProjectGallerie from '~/utils/Gallerie';
 function ProjectDescription({id}: {id: number }) {
 return(
     <div className=' '>
@@ -93,9 +92,10 @@ function Demo({id}: {id: number }) {
   return (
   <div className="  ">
   <div className="">
+
+    <div className='mx-14 ' > {Projects[id].Body} </div>
     
-        <ProjectGallerie />
-         <DemosResponsiveDesign/>
+        
          
 
   </div>
